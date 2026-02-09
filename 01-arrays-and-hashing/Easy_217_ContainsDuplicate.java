@@ -1,3 +1,4 @@
+
 /**
  * LeetCode #217 - Contains Duplicate
  * Difficulty: Easy
@@ -34,7 +35,17 @@ import java.util.*;
 public class Easy_217_ContainsDuplicate {
 
     public boolean containsDuplicate(int[] nums) {
-        // Your code here
+        Set<Integer> seen = new HashSet<>();
+
+        for (int num : nums) {
+
+            if (seen.contains(num))
+                return true;
+
+            seen.add(num);
+        }
+
+        return false;
 
     }
 
@@ -43,19 +54,19 @@ public class Easy_217_ContainsDuplicate {
         Easy_217_ContainsDuplicate solution = new Easy_217_ContainsDuplicate();
 
         // Test case 1
-        int[] nums1 = {1, 2, 3, 1};
+        int[] nums1 = { 1, 2, 3, 1 };
         System.out.println("Test 1: " + solution.containsDuplicate(nums1)); // Expected: true
 
         // Test case 2
-        int[] nums2 = {1, 2, 3, 4};
+        int[] nums2 = { 1, 2, 3, 4 };
         System.out.println("Test 2: " + solution.containsDuplicate(nums2)); // Expected: false
 
         // Test case 3
-        int[] nums3 = {1, 1, 1, 3, 3, 4, 3, 2, 4, 2};
+        int[] nums3 = { 1, 1, 1, 3, 3, 4, 3, 2, 4, 2 };
         System.out.println("Test 3: " + solution.containsDuplicate(nums3)); // Expected: true
 
         // Test case 4 - Edge case: single element
-        int[] nums4 = {1};
+        int[] nums4 = { 1 };
         System.out.println("Test 4: " + solution.containsDuplicate(nums4)); // Expected: false
     }
 }
