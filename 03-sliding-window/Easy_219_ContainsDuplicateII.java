@@ -37,17 +37,16 @@ import java.util.*;
 public class Easy_219_ContainsDuplicateII {
 
     public boolean containsNearbyDuplicate(int[] nums, int k) {
-      
 
         Set<Integer> hashSet = new HashSet<>();
 
-        for(int i =0; i< nums.length;i++){
-            if(i > k){
+        for (int i = 0; i < nums.length; i++) {
+            if (i > k) {
 
-                hashSet.remove(nums[i-k-1]);
+                hashSet.remove(nums[i - k - 1]);
             }
 
-            if(hashSet.contains(nums[i])){
+            if (hashSet.contains(nums[i])) {
 
                 return true;
             }
