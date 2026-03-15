@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(javac:*)",
+      "Bash(java:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nImplement Two Sum solution using hash table approach\n\n- Add optimal O\\(n\\) time and O\\(n\\) space solution\n- Use HashMap to store complements for single-pass lookup\n- Include three test cases covering different scenarios\n- Solution handles duplicates and negative numbers correctly\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(gh repo create:*)",
+      "Bash(brew install:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git remote:*)",
+      "Bash(ssh-keygen:*)",
+      "Bash(ssh-keyscan:*)",
+      "Bash(~/.ssh/known_hosts)",
+      "Bash(ssh:*)",
+      "Bash(pbcopy:*)",
+      "Bash(ssh-add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nImplement Contains Duplicate solution using HashSet\n\n- Add optimal O\\(n\\) time and O\\(n\\) space solution\n- Use HashSet for efficient duplicate detection\n- Early exit optimization when duplicate found\n- Include four test cases with edge case coverage\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)",
+      "Bash(ls:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(/usr/local/opt/node/bin/node:*)"
+    ]
+  }
+}
