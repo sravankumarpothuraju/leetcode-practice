@@ -41,8 +41,27 @@ import java.util.*;
 public class Medium_424_LongestRepeatingCharacterReplacement {
 
     public int characterReplacement(String s, int k) {
-        // Your code here
+        int[] freq = new int[26];
+        int left = 0, maxFreq = 0, maxLen = 0;
 
+        for (int right = 0; right < s.length(); right++) {
+            char c = s.charAt(right);
+
+            // step 1
+            freq[c - 'A']++;
+            maxFreq = Math.max(maxFreq, freq[c - 'A']);
+
+            // step 2
+            if ((right - left + 1) - maxFreq > k) {
+                freq[s.charAt(left) - 'A']--;
+                left++;
+            }
+
+            // step 3
+            maxLen = Math.max(maxLen, right - left + 1);
+        }
+
+        return maxLen;
     }
 
     // Test cases
